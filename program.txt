@@ -1,53 +1,24 @@
 :Menu("CHIPS!","INSTRUCTIONS",65,"PLAY",19,"ABOUT",2, "VERSION HISTORY",6,"COMING SOON!",4,"QUIT",69)
 
-:Lbl 6
-:Menu("VERSION HISTORY", "1.0",99,"2.0",71,"2.1",72,"2.2",73,"BACK",1)
-
-:Lbl 19
+:Lbl 2
 :ClrHome
-:Menu("PLAY CHIPS!","SINGLE PLAYER",30,"MULTIPLAYER",5,"BACK",1)
-
-:Lbl 99
-:ClrHome
-:Disp "VERSION 1.0"
+:Disp "CHIPS! (C)"
+:Disp "A TEST OF LOGIC"
 :Disp " "
-:Disp "-FIRST AI"
-:Disp "ABOUT INFORMATION"
+:Disp "BROUGHT TO YOU"
+:Disp "BY STUDENTS OF"
+:Disp "SAINT FRANCIS"
+:Disp "HIGH SCHOOL."
 :Pause
-:ClrHome
-:Goto 6
-
-:Lbl 71
-:Disp "VERSION 2.0"
-:Disp " "
-:Disp "-NEW ABOUT"
-:Disp "INFORMATION"
-:Disp "-SOME NEW SOURCE"
-:Pause
-:ClrHome
-:Goto 6
-
-:Lbl 72
-:Disp "VERSION 2.1"
-:Disp " "
-:Disp "-NEW ABOUT"
-:Disp "INFORMATION"
-:Disp "-NEW MENUS"
-:Disp "-OBJECT"
-:Pause
-:ClrHome
-:Goto 6
-
-:Lbl 73
 :Disp "VERSION 2.2"
-:Disp " "
-:Disp "-HINTS + TIPS"
-:Disp "-HOW TO PLAY"
-:Disp "-VERSION HISTORY"
-:Disp "-COMING SOON!"
+:Disp "................"
+:Disp "CREATED BY"
+:Disp "EDWARD MEEHAN"
+:Disp "................"
+:Disp "MODIFIED BY"
+:Disp "WILL MAYNARD"
 :Pause
-:ClrHome
-:Goto 6
+:Goto 1
 
 :Lbl 4
 :Disp "COMING SOON!(P1)"
@@ -61,130 +32,15 @@
 :ClrHome
 :Goto 49
 
-:Lbl 49
-:Disp "COMING SOON!(P2)"
-:Disp " "
-:Disp "PLAY"
-:Pause
-:ClrHome
-:Goto 0
+:Lbl 5
+:Menu("MULTIPLAYER","LOCAL",70,"LINK PLAY",67,"BACK",1)
 
-:Lbl 65
-:ClrHome
-:Menu("INSTRUCTIONS","OBJECT",54,"HOW TO PLAY",55,"HINTS AND TIPS",56,"BACK",57)
+:Lbl 6
+:Menu("VERSION HISTORY", "1.0",99,"2.0",71,"2.1",72,"2.2",73,"BACK",1)
 
-:Lbl 54
-:Disp "OBJECT:"
-:Disp " "
-:Disp "THE OBJECT OF"
-:Disp "CHIPS! IS TO BE"
-:Disp "THE LAST PLAYER"
-:Disp "TO TAKE A CHIP!."
-:Pause
+:Lbl 19
 :ClrHome
-:Goto 65  	//instructions page
-
-:Lbl 55
-:Disp "HOW TO PLAY(P1):"
-:Disp " "
-:Disp "WHEN ASKED TO"
-:Disp "TAKE A CHIP!,"
-:Disp "PRESS A NUMBER ON"
-:Disp "THE KEYPAD AND"
-:Disp "HIT ENTER."
-:Pause
-:ClrHome
-:Goto 58	//how to play page 2
-
-:Lbl 58
-:Disp "HOW TO PLAY(P2):"
-:Disp "THE NUMBER YOU"
-:Disp "CHOOSE WILL BE"
-:Disp "SUBTRACED FROM"
-:Disp "THE CURRENT"
-:Disp "TOTAL OF CHIPS!."
-:Pause
-:ClrHome
-:Goto 59  	//how to play page 3
-
-:Lbl 59
-:Disp "HOW TO PLAY(P3):"
-:Disp " "
-:Disp "THE COMPUTER"
-:Disp "WILL THEN MOVE."
-:Disp "THE GAME IS OVER"
-:Disp "WHEN THERE ARE"
-:Disp "NO CHIPS!"
-:Pause
-:ClrHome
-:Goto 60  	//how to play page 4
-
-:Lbl 60
-:Disp "HOW TO PLAY(P3)"
-:Disp " "
-:Disp "REMAINING."
-:Pause
-:ClrHome
-:Goto 65  	//instructions page
-
-:Lbl 57  		//back
-:Goto 0		//main menu
-
-:Lbl 56
-:Disp "HINTS + TIPS(P1)"
-:Disp " "
-:Disp "THE NUMBER OF"
-:Disp "CHIPS! YOU CAN"
-:Disp "TAKE IS BASED ON"
-:Disp "THE PREVIOUS"
-:Disp "MOVE. YOU CAN"
-:Pause
-:ClrHome
-:Goto 40	//hints and tips page 2
-
-:Lbl 40
-:Disp "HINTS + TIPS(P2)"
-:Disp " "
-:Disp TAKE UP TO TWICE"
-:Disp "THE AMOUNT OF"
-:Disp "CHIPS! TAKEN"
-:Disp "LAST TURN.  TAKE"
-:Disp "YOUR TIME ON EACH"
-:Pause
-:ClrHome
-:Goto 41	//hints and tips page 3
-
-:Lbl 41
-:Disp "HINTS + TIPS(P3)"
-:Disp " "
-:Disp "MOVE."
-:Disp " "
-:Disp "ALSO, REMEMBER"
-:Disp "THAT HUMAN"
-:Disp "OPPONENTS CAN BE"
-:Pause
-:ClrHome
-:Goto 42	//hints and tips page 4
-
-:Lbl 42
-:Disp "HINTS + TIPS(P4)"
-:Disp " "
-:Disp "MUCH MORE"
-:Disp "DIFFICULT THAN"
-:Disp "THE COMPUTER."
-:Pause
-:ClrHome
-:Goto 65	//instructions page
-
-:Lbl 30		//single player
-:ClrHome
-:Input "NUMBER OF CHIPS:",C
-:Disp "REMAINING:",C
-:randInt(1,int(C/2))->B
-:C-B->C
-:Disp "COMPUTER TAKES:",B
-:Pause
-:Disp "REMAINING:",C
+:Menu("PLAY CHIPS!","SINGLE PLAYER",30,"MULTIPLAYER",5,"BACK",1)
 
 :Lbl 20
 :While C>0
@@ -229,6 +85,139 @@
 :If A=0
 :"COMPUTER WINS!"->Str1
 :Menu(Str1,"PLAY AGAIN?",30,"MAIN MENU",1,"QUIT",69)
+
+:Lbl 30		//single player
+:ClrHome
+:Input "NUMBER OF CHIPS:",C
+:Disp "REMAINING:",C
+:randInt(1,int(C/2))->B
+:C-B->C
+:Disp "COMPUTER TAKES:",B
+:Pause
+:Disp "REMAINING:",C
+
+:Lbl 40
+:Disp "HINTS + TIPS(P2)"
+:Disp " "
+:Disp TAKE UP TO TWICE"
+:Disp "THE AMOUNT OF"
+:Disp "CHIPS! TAKEN"
+:Disp "LAST TURN.  TAKE"
+:Disp "YOUR TIME ON EACH"
+:Pause
+:ClrHome
+:Goto 41	//hints and tips page 3
+
+:Lbl 49
+:Disp "COMING SOON!(P2)"
+:Disp " "
+:Disp "PLAY"
+:Pause
+:ClrHome
+:Goto 0
+
+:Lbl 41
+:Disp "HINTS + TIPS(P3)"
+:Disp " "
+:Disp "MOVE."
+:Disp " "
+:Disp "ALSO, REMEMBER"
+:Disp "THAT HUMAN"
+:Disp "OPPONENTS CAN BE"
+:Pause
+:ClrHome
+:Goto 42	//hints and tips page 4
+
+:Lbl 42
+:Disp "HINTS + TIPS(P4)"
+:Disp " "
+:Disp "MUCH MORE"
+:Disp "DIFFICULT THAN"
+:Disp "THE COMPUTER."
+:Pause
+:ClrHome
+:Goto 65	//instructions page
+
+:Lbl 54
+:Disp "OBJECT:"
+:Disp " "
+:Disp "THE OBJECT OF"
+:Disp "CHIPS! IS TO BE"
+:Disp "THE LAST PLAYER"
+:Disp "TO TAKE A CHIP!."
+:Pause
+:ClrHome
+:Goto 65  	//instructions page
+
+:Lbl 55
+:Disp "HOW TO PLAY(P1):"
+:Disp " "
+:Disp "WHEN ASKED TO"
+:Disp "TAKE A CHIP!,"
+:Disp "PRESS A NUMBER ON"
+:Disp "THE KEYPAD AND"
+:Disp "HIT ENTER."
+:Pause
+:ClrHome
+:Goto 58	//how to play page 2
+
+:Lbl 56
+:Disp "HINTS + TIPS(P1)"
+:Disp " "
+:Disp "THE NUMBER OF"
+:Disp "CHIPS! YOU CAN"
+:Disp "TAKE IS BASED ON"
+:Disp "THE PREVIOUS"
+:Disp "MOVE. YOU CAN"
+:Pause
+:ClrHome
+:Goto 40	//hints and tips page 2
+
+:Lbl 57		//back
+:Goto 0		//main menu
+
+:Lbl 58
+:Disp "HOW TO PLAY(P2):"
+:Disp "THE NUMBER YOU"
+:Disp "CHOOSE WILL BE"
+:Disp "SUBTRACED FROM"
+:Disp "THE CURRENT"
+:Disp "TOTAL OF CHIPS!."
+:Pause
+:ClrHome
+:Goto 59  	//how to play page 3
+
+:Lbl 59
+:Disp "HOW TO PLAY(P3):"
+:Disp " "
+:Disp "THE COMPUTER"
+:Disp "WILL THEN MOVE."
+:Disp "THE GAME IS OVER"
+:Disp "WHEN THERE ARE"
+:Disp "NO CHIPS!"
+:Pause
+:ClrHome
+:Goto 60  	//how to play page 4
+
+:Lbl 60
+:Disp "HOW TO PLAY(P3)"
+:Disp " "
+:Disp "REMAINING."
+:Pause
+:ClrHome
+:Goto 65	//instructions page
+
+:Lbl 65
+:ClrHome
+:Menu("INSTRUCTIONS","OBJECT",54,"HOW TO PLAY",55,"HINTS AND TIPS",56,"BACK",57)
+
+:Lbl 67
+:Disp "COMING SOON"
+:Pause
+:Goto 1
+:Lbl 69
+:ClrHome
+:Stop
 
 :Lbl 70
 :ClrHome
@@ -288,34 +277,44 @@
 
 :Menu(Str0,"PLAY AGAIN",70,"MAIN MENU",1, "QUIT",69)
 
-:Lbl 2
-:ClrHome
-:Disp "CHIPS! (C)"
-:Disp "A TEST OF LOGIC"
+:Lbl 71
+:Disp "VERSION 2.0"
 :Disp " "
-:Disp "BROUGHT TO YOU"
-:Disp "BY STUDENTS OF"
-:Disp "SAINT FRANCIS"
-:Disp "HIGH SCHOOL."
+:Disp "-NEW ABOUT"
+:Disp "INFORMATION"
+:Disp "-SOME NEW SOURCE"
 :Pause
-:Disp "VERSION 2.2"
-:Disp "................"
-:Disp "CREATED BY"
-:Disp "EDWARD MEEHAN"
-:Disp "................"
-:Disp "MODIFIED BY"
-:Disp "WILL MAYNARD"
-:Pause
-:Goto 1
-
-:Lbl 5
-:Menu("MULTIPLAYER","LOCAL",70,"LINK PLAY",67,"BACK",1)
-
-:Lbl 67
-:Disp "COMING SOON"
-:Pause
-:Goto 1
-:Lbl 69
 :ClrHome
-:Stop
-:
+:Goto 6
+
+:Lbl 72
+:Disp "VERSION 2.1"
+:Disp " "
+:Disp "-NEW ABOUT"
+:Disp "INFORMATION"
+:Disp "-NEW MENUS"
+:Disp "-OBJECT"
+:Pause
+:ClrHome
+:Goto 6
+
+:Lbl 73
+:Disp "VERSION 2.2"
+:Disp " "
+:Disp "-HINTS + TIPS"
+:Disp "-HOW TO PLAY"
+:Disp "-VERSION HISTORY"
+:Disp "-COMING SOON!"
+:Pause
+:ClrHome
+:Goto 6
+
+:Lbl 99
+:ClrHome
+:Disp "VERSION 1.0"
+:Disp " "
+:Disp "-FIRST AI"
+:Disp "ABOUT INFORMATION"
+:Pause
+:ClrHome
+:Goto 6
